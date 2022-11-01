@@ -36,6 +36,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SeccionContactoComponent } from './seccion-contacto/seccion-contacto.component';
 
 
 
@@ -79,7 +80,8 @@ const materialModules = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SeccionContactoComponent
   ],
   imports: [
     materialModules,

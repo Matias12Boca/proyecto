@@ -113,13 +113,17 @@
     </div>
   </div>
 </div>
+
  <div class="container-fluid">
+
   <mat-card class="sobreMi">
     <div class="row">
       <div class="col-md-6">
-        <p class="fw-bold">
-          <p class="fw-bold dato">  Sobre Mi:
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem cum, reprehenderit vel tempore consequatur cumque neque iusto quis, dolor possimus quaerat labore ipsum voluptatum. Eos cupiditate porro adipisci fuga.
+        <p class="fw-bold ">
+          <p class=" fw-bold dato">SOBRE MI :
+          Hola me llamo Matias Vidal vivo en la ciudad de Berisso ,Argentina .
+          Actualemte estoy trabajando en un frigorifico en Tolosa y estudio programcion web en el CFL 404 de Berisso.
+
          </p>
 
 
@@ -200,29 +204,40 @@
 
   </div>
 
-  <div class=" fw-bold">
-    <label for="exampleFormControlInput1" class="form-label">Email</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+  <div class="container-fluid text-center">
+    <form  [formGroup]="formularioDeContacto" (ngSubmit)="alEnviarMensaje()">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="nombre">
+          </mat-form-field>
+          <div *ngIf="formularioDeContacto.controls.nombre.errors" class="text-danger">
+            <div *ngIf="formularioDeContacto.controls.nombre.errors.required">Se necesita un Nombre.</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <mat-form-field appearance="fill">
+            <mat-label>Mensaje</mat-label>
+            <input matInput type="text" formControlName="mensaje">
+          </mat-form-field>
+          <div *ngIf="formularioDeContacto.controls.mensaje.errors" class="text-danger">
+            <div *ngIf="formularioDeContacto.controls.mensaje.errors.required">Mensaje es necesario.</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button mat-raised-button type="submit" color="primary">Enviar Mensaje</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class=" fw-bold">
-    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
-
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-12">
-
-    </div>
-    </div>
-
-
-
-    <button class="botonsend" mat-raised-button color="primary">Enviar</button>
-
-  </div>
 
 
 
