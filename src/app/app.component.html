@@ -35,7 +35,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 text-center">
-        <img class="perfil" src="assets/perfil.jpg">
+        <img class="perfil" src="../assets/mati progggg.webp">
       </div>
     </div>
     <div class="row">
@@ -120,7 +120,7 @@
     <div class="row">
       <div class="col-md-6">
         <p class="fw-bold ">
-          <p class=" fw-bold dato">SOBRE MI :
+          <p class=" fw-bold dato"> SOBRE MI :
           Hola me llamo Matias Vidal vivo en la ciudad de Berisso ,Argentina .
           Actualemte estoy trabajando en un frigorifico en Tolosa y estudio programcion web en el CFL 404 de Berisso.
 
@@ -133,7 +133,7 @@
         <p class="fw-bold dato">Informacion Basica</p>
         <p class="fw-bold dato">Fecha De Nacimiento: <span class="fw-normal">04/07/1999</span></p>
         <p class="fw-bold dato">Email: <span class="fw-normal">matiasv562@gamil.com</span></p>
-        <p class="fw-bold dato">Celular: <span class="fw-normal">000</span></p>
+        <p class="fw-bold dato">Celular: <span class="fw-normal">2216838623</span></p>
       </div>
 
 
@@ -193,50 +193,56 @@
 
 
   </div>
+
   <div  class=" texto col-md-12  text-center fw-bold">
      <p>
        CONTACTO
     </p>
 
-
-
-
-
   </div>
 
+  <form  [formGroup]="formularioDeContacto" (ngSubmit)="alEnviarMensaje()">
 
-  <div class="container-fluid text-center">
-    <form  [formGroup]="formularioDeContacto" (ngSubmit)="alEnviarMensaje()">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <mat-form-field appearance="fill">
-            <mat-label>Nombre</mat-label>
-            <input matInput type="text" formControlName="nombre">
-          </mat-form-field>
-          <div *ngIf="formularioDeContacto.controls.nombre.errors" class="text-danger">
-            <div *ngIf="formularioDeContacto.controls.nombre.errors.required">Se necesita un Nombre.</div>
-          </div>
+
+
+    <div class="row">
+
+
+      <div class="col-md-12 text-center">
+
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" formControlName="nombre">
+        </mat-form-field>
+        <div *ngIf="formularioDeContacto.controls.nombre.errors" class="text-danger">
+          <div *ngIf="formularioDeContacto.controls.nombre.errors.required">Se necesita un Nombre.</div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <mat-form-field appearance="fill">
-            <mat-label>Mensaje</mat-label>
-            <input matInput type="text" formControlName="mensaje">
-          </mat-form-field>
-          <div *ngIf="formularioDeContacto.controls.mensaje.errors" class="text-danger">
-            <div *ngIf="formularioDeContacto.controls.mensaje.errors.required">Mensaje es necesario.</div>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <mat-form-field appearance="fill">
+          <mat-label>Mensaje</mat-label>
+          <input matInput type="text" formControlName="mensaje">
+        </mat-form-field>
+        <div *ngIf="formularioDeContacto.controls.mensaje.errors" class="text-danger">
+          <div *ngIf="formularioDeContacto.controls.mensaje.errors.required">Mensaje es necesario.</div>
         </div>
       </div>
-      <br>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <button mat-raised-button type="submit" color="primary">Enviar Mensaje</button>
-        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button mat-raised-button type="submit" color="primary">Enviar Mensaje</button>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
+
+</div>
+
+
 
 
 

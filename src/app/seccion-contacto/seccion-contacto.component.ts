@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {  ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-seccion-contacto',
   templateUrl: './seccion-contacto.component.html',
@@ -11,5 +11,16 @@ export class SeccionContactoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @ViewChild('seccionContacto') seccionContacto: ElementRef | any;
+
+public scrollToIntro() {
+  this.seccionContacto.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+  });
+}
+
 
 }
